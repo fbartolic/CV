@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper,roman]{moderncv}        
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[osf,sc]{mathpazo}
+\linespread{1.05}  
+\usepackage{inconsolata}
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{courier}
+\usepackage{fontawesome}
+% personal data
+\name{Fran}{Bartoli\'{c}}
+\title{\textcolor{gray}{ Curriculum Vitae}}
+%\address{Ivana Zajca 4}{51000 Rijeka}{Croatia}
+\phone[mobile]{+385~(97)~729~6088}                   % optional, remove / commen
+\email{fbartolic@uniri.hr} 
+\extrainfo{%
+\faTwitter \, @fbartolic\\ 
+\faGithub \, fbartolic}
+
+\begin{document}
+\makecvtitle
+\section{Personal information}
+\cvitem{Nationality}{Croatian}
+\cvitem{Languages}{Croatian (Native), English (Fluent)}
+\section{Education}
+\cventry{2015--today}{M.Sc. Physics with Astrophysics}{University of Rijeka}
+{Rijeka, Croatia}{}{Currently in second year of studies.}
+
+\cventry{2012--2015}{B.Sc. Physics}{University of Split}{Split, Croatia}{}
+{Cumulative GPA: 4.5/5. I spent the last semester of my bachelor's degree at
+Lund University, Sweden. At Lund, I spent half the time taking courses and the other
+half writing a bachelor's thesis.}
+\section{Research Experience}
+\cventry{02/2017--today}{Master's thesis project}{
+Lund Observatory, Sweden}
+{Lund, Sweden}{30 weeks FTE work}{I am currently doing my master's project in exoplanet dynamics,
+the title is \emph{Planets Orbiting Evolving Binary Stars}. The goal of the 
+project is to see what happens to circumbinary planets as the binary evolves
+up to the \emph{common-envelope} phase. In particular, I am looking at the
+influence of mean-motion resonance passage on the stability of orbiting planets
+as the binary's orbit shrinks due to tidal interaction. These can excite the
+eccentricity of the planets and potentially eject them. I am approaching the
+problem in two ways. First, by developing an analytical Hamiltonian model 
+of high-order resonances which can be used to estimate the change in eccentricity. 
+Second, by using the NBODY code \texttt{REBOUND} coupled with a 
+stellar evolution code \texttt{binary\_c}
+to investigate the problem in detail and validate the analytical model.
+The long-term goal of the project is to put dynamical constraints on circumbinary
+planet evolution during late stages of stellar evolution. This is useful because
+given a detection of a circumbinary planet around an evolved binary we might
+be able to say if it formed with the binary and dynamically evolved to its current
+orbit or, a more tantalizing possibility, it formed during the late stages of binary evolution.\\\\
+\emph{Supervisors: Dr. Alexander J. Mustill \& Prof. Dijana Dominis Prester}}
+
+\cventry{07/2016--08/2016}{Summer student programme}{Nicolaus Copernicus
+Astronomical Center}
+{Warsaw, Poland}{4 weeks FTE work}{I spent a month in Warsaw working on MHD simulations of 
+accretion disks with the \texttt{PLUTO} code. During my time there I ran several 
+non-ideal MHD simulations of accretion disks around \emph{cataclysmic variable} 
+stars in order to investigate the stability and
+structure of such disks. I also wrote Python code for visualization of the Pluto 
+output variables in 2D axisymmetric spherical coordinates. 
+The main skills I learned there are working with Linux systems 
+\& clusters, using a modern 
+fluid dynamics code such as \texttt{PLUTO}, and basic 
+physics of magnetohydrodynamics in the nonrelativistic regime.\\\\
+\emph{Supervisors: Dr. Miljenko \v Cemelji\'c \& Prof. W\l odzimierz Klu\'zniak}
+}
+
+\cventry{01/2015--06/2015}{Bachelor's thesis project}{Lund Observatory}
+{Lund, Sweden}{10 weeks FTE work}{
+In my bachelor's thesis project, 
+\textit{Tidal Evolution of Close-In Extra-Solar Planets}, I investigated the role
+of planet induced stellar tides on the orbital evolution of planets orbiting
+evolved stars. I wrote \texttt{C++} code which solves analytical models of
+the tidal interactionto see how often planets spiral into
+the star during late stages of stellar evolution and I compared my results 
+with recent exoplanet observations. \\\\
+\emph{Supervisors: Dr. Alexander J. Mustill \& Dr. Dejan Vinkovi\'{c}}
+}
+
+\section{Computer skills}
+\cvitem{Programming}{My main language of choice is \texttt{Python}. I use it extensively together with
+numerical/scientific libraries \texttt{NumPy}, \texttt{SciPy} and \texttt{matplotlib}, 
+\texttt{SymPy} (computer algebra), and \texttt{Jupyter} notebooks. 
+I also use \texttt{C/C++}, and I have used
+\texttt{C\#} and \texttt{MATLAB} in the past.}
+\cvitem{Numerical}{I am familiar with some basic numerical methods used in physics and their 
+implementation in \texttt{C/C++} or \texttt{Python}.}
+\cvitem{Operating systems}{Linux \& Windows}
+\cvitem{Other}{I use \texttt{Vim} as a text editor, and \LaTeX  for writing documents.
+I am familiar with the \texttt{Git} version control system and \texttt{GitHub} respository
+hosting service. I use open-source software in research whenever possible.}
+
+\section{Summer schools \& workshops}
+\cvitem{01/2017}{\emph{MAGIC data analysis workshop}, 3-day workshop, Rijeka, Croatia}
+\cvitem{06/2016}{\emph{Extrasolar Planets: Their Formation and Evolution
+, DPG Physics School}, summer school, Bad Honnef, Germany}
+\cvitem{08/2015}{\emph{Summer School on Astrophysics and Astroparticles}, summer school, Petnica, Serbia }
+
+\section{Conference attendance}
+\cvitem{05/2017}{\emph{Impacts in planetary systems}, Lund, Sweden}
+\cvitem{04/2017}{\emph{Bayes@Lund}, Lund, Sweden}
+\cvitem{04/2017}{\emph{Big Questions in Astrophysics}, Lund, Sweden}
+\cvitem{03/2017}{\emph{COMPUTE winter meeting}, Lund, Sweden}
+\cvitem{02/2017}{\emph{The Gaseous Universe for All}, Lund, Sweden}
+\cvitem{05/2015}{\emph{Exoplanets in Lund 2015},  conference, Lund, Sweden }
+
+\section{Awards, Competitions and Honors}
+\cvitem{2016}{\emph{Erasmus+ Internship } scholarship}
+\cvitem{2015}{\emph{Dean's Award for undergraduate academic excellence}, University of Split}
+\cvitem{2014}{\emph{Erasmus+ Exchange }scholarship}
+
+\section{Talks}
+\cvitem{05/2017}{\emph{Astro Journal Club presentation}, Lund, Sweden}
+\cvitem{05/2015}{\emph{Bachelor's thesis public defense}, Lund, Sweden}
+
+\section{Organizational skills}
+\cvitem{05/2017}{LOC member for \emph{Impacts in planetary systems} conference, Lund, Sweden}
+\cvitem{04/2017}{Organization of \emph{Interstellar communication; a not-so-simple,
+interdisciplinary response} talk for the general public by Paul Quast}
+\cvitem{04/2017}{Helped with organizing the workshops at the \emph{Big Questions in Astrophysics} jubilee meeting in Lund, Sweden}
+\cvitem{04/2017}{Organization of \emph{The Extremely Large Telescope} talk for the general 
+public by E-ELT programme scientist Michele Cirasuolo, Lund, Sweden}
+
+\section{Outreach}
+\cvitem{2017}{\emph{ALVA astronomy club}, Board member}
+\cvitem{09/2014}{\emph{European Researchers' Night}, volunteer, Split, Croatia}
+\cvitem{04/2014}{\emph{Festival of Science}, volunteer, Split, Croatia}
+
+%\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%content
+%\makeletterclosing
+\end{document}
+
