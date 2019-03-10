@@ -14,7 +14,7 @@
 
 % personal data
 \name{Fran}{Bartoli\'{c}}
-\title{\textcolor{gray}{Résumé}}
+\title{\textcolor{gray}{ Curriculum Vitae}}
 %\address{Ivana Zajca 4}{51000 Rijeka}{Croatia}
 \homepage{fran.space}
 \phone[mobile]{+44~(74)~609~22558}                   % optional, remove / commen
@@ -30,35 +30,34 @@
 \cvitem{Languages}{Croatian (Native), English (Fluent)}
 \section{Education}
 \cventry{2017--2021 (expected)}{Ph.D. Astrophysics}{University of St Andrews}
-{St Andrews, Scotland}{}{This PhD position is a part of a new scheme funded by the UK government
-with a strong focus on producing PhD graduates with Data Science and industry relevant skills. 
-In my research, I am primarily interested in building interpretable probabilistic models, 
-using advanced statistical methods such as Bayesian models and Machine Learning, 
-and applying them to research problems in astrophysics.}
+{St Andrews, Scotland}{}{I am currently doing a PhD in Astrophysics at the University
+of St Andrews in Scotland. This position is a part of a new scheme with a strong 
+focus on Data Science and transferable skills. As a part of this scheme, in the middle
+of my PhD I will undertake a 6 month internship in industry. The focus of my research
+is on modeling gravitational microlensing events with a focus on exoplanets. I am 
+primarily interested in probabilistic inference, Bayesian statistics and Machine 
+Learning, both in the context of astronomy and elsewhere.}
 \cventry{2015--2017}{M.Sc. Physics with Astrophysics}{University of Rijeka}
 {Rijeka, Croatia}{}{Cumulative GPA: 4.7/5. I spent the first three semesters 
 doing courses in theoretical 
-physics and astronomy. In the final semester I worked on 
-a research project at Lund University in Sweden for 7 months.}
+physics and astronomy. For the last semester and during the summer, I worked on 
+a research project at Lund Observatory in Sweden.}
 
 \cventry{2012--2015}{B.Sc. Physics}{University of Split}{Split, Croatia}{}
-{Cumulative GPA: 4.5/5. I took courses in theoretical physics and programming. In the final 
-semester I did a short research project as an exchange student in Lund, Sweden.}
-
+{Cumulative GPA: 4.5/5. I spent the last semester of my bachelor's degree at
+Lund University, Sweden. At Lund, I spent half the time taking courses and the other
+half writing a bachelor's thesis.}
 \section{Research Experience}
 \cventry{09/2017--today}{Ph.D. project}{
     School of Physics \& Astronomy, University of St Andrews}
-{St Andrews, Scotland}{}{I am working on modeling astrophysical time series data 
-using advanced Bayesian methods.
-The main challenges I am working on is how to build probabilistic models of complex astrophysical
-phenomena in order to extract useful physical information about extrasolar planets.
-These models are complex, non-linear, and have degenerate parameter spaces, a regime where
-even the most sophisticated statistical methods regularly fail. 
-The statistical methods I use in my research include Gaussian Processes, Hamiltonian Monte Carlo,
-linear models, and neural networks.
-I am approaching the thesis project bottom-up, starting with simple interpretable models, solving 
-one challenging problem at the time, and writing usable and scalable open-source code 
-in the process. 
+{St Andrews, Scotland}{}{I am working on modeling gravitational microlensing events
+using Bayesian methods. 
+The main challenge in this area is dealing with complex non-linear and degenerate 
+parameter spaces, even the most sophisticated statistical methods regularly 
+fail in this regime. 
+My goal for this work is to approach the problem bottom-up, starting with simple fully
+Bayesian models and solving one challenging problem at the time, and writing usable
+open-source code in the process.
 \\\\
 \emph{Supervisor: Dr. Martin Dominik}}
 
@@ -66,24 +65,49 @@ in the process.
 Lund Observatory, Sweden}
 {Lund, Sweden}{30 weeks FTE work}{
 The title of my master's thesis
-is \emph{Planets Orbiting Evolving Binary Stars}, the subject of the thesis was to construct 
-analytical and numerical models for describing the dynamics of extrasolar planets.
-In this project I developed both a pen and paper model, and a numerical simulation for the
-relevant physical phenomenon. The project involved writing \texttt{Python} code for 
-solving symbolic equations and making plots, and  interfaced \texttt{Python} code with 
-a solver for differential equations written in \texttt{C++}. Unfortunately, I did not have time
-to publish the research findings in a journal.
-\\\\
+is \emph{Planets Orbiting Evolving Binary Stars}, and the subject is exoplanet dynamics. 
+The goal of the 
+project was to see what happens to circumbinary planets as the binary star evolves
+up to the \emph{common-envelope} phase. In particular, I looked at the
+influence of mean-motion resonance passage on the stability of orbiting planets
+as the binary's orbit shrinks due to tidal interaction. I approached the
+problem in two ways. First, by developing an analytical Hamiltonian model 
+of high-order resonances which can be used to estimate the change in eccentricity. 
+Second, by using an NBODY code \texttt{REBOUND} coupled with a 
+stellar evolution code \texttt{binary\_c}
+to investigate the problem in detail and validate the analytical model.
+The long-term goal of this kind of work is to put dynamical constraints on circumbinary
+planet evolution during late stages of stellar evolution. This is useful because
+given a detection of a circumbinary planet around an evolved binary we might
+be able to say if it formed with the binary and dynamically evolved to its current
+orbit or if it formed during the late stages of binary evolution.\\\\
 \emph{Supervisors: Dr. Alexander J. Mustill \& Prof. Dijana Dominis Prester}}
 
 \cventry{07/2016--08/2016}{Summer student programme}{Nicolaus Copernicus
 Astronomical Center}
-{Warsaw, Poland}{4 weeks FTE work}{I spent a month in Warsaw working on magnetohydrodynamic 
-simulations of accretion disks using a popular astrophysics code written in \texttt{C++}.
-I spent my time running simulations and writing a data visualization code in \texttt{Python}.
-I learned to work with Linux systems  computer \& clusters.
-\\\\
+{Warsaw, Poland}{4 weeks FTE work}{I spent a month in Warsaw working on MHD simulations of 
+accretion disks with the \texttt{PLUTO} code. During my time there I ran several 
+non-ideal MHD simulations of accretion disks around \emph{cataclysmic variable} 
+stars in order to investigate the stability and
+structure of such disks. I also wrote Python code for visualization of the Pluto 
+output variables in 2D axisymmetric spherical coordinates. 
+The main skills I learned there are working with Linux systems 
+\& clusters, using a modern 
+fluid dynamics code such as \texttt{PLUTO}, and basic 
+physics of magnetohydrodynamics in the nonrelativistic regime.\\\\
 \emph{Supervisors: Dr. Miljenko \v Cemelji\'c \& Prof. W\l odzimierz Klu\'zniak}
+}
+
+\cventry{01/2015--06/2015}{Bachelor's thesis project}{Lund Observatory}
+{Lund, Sweden}{10 weeks FTE work}{
+In my bachelor's thesis project, 
+\textit{Tidal Evolution of Close-In Extra-Solar Planets}, I investigated the role
+of planet induced stellar tides on the orbital evolution of planets orbiting
+evolved stars. I wrote \texttt{C++} code which solves analytical models of
+the tidal interactionto see how often planets spiral into
+the star during late stages of stellar evolution and I compared my results 
+with recent exoplanet observations. \\\\
+\emph{Supervisors: Dr. Alexander J. Mustill \& Dr. Dejan Vinkovi\'{c}}
 }
 \section{Publications}
 \cvitem{2018}{V. Bozza, E. Bachelet, \textbf{F. Bartoli\'{c}}, T. M. Heintz, 
@@ -91,7 +115,7 @@ A. R. Hoag, and M. Hun-dertmark.  \emph{VBBINARYLENSING: a public package
 for microlensing light-curve  computation.}, 479:5157–5167,  
 October  2018.    doi:   10.1093/mn-ras/sty1791}
 
-\section{Technical Skills}
+\section{Computer skills}
 \cvitem{Programming}{My main language of choice is \texttt{Python}. I use it extensively together with
 numerical/scientific libraries \texttt{NumPy}, \texttt{SciPy} and \texttt{matplotlib}, 
 and \texttt{Jupyter} notebooks. I am also familiar with the probabilistic programming
