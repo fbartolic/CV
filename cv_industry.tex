@@ -1,7 +1,8 @@
-\documentclass[11pt,a4paper,roman]{moderncv}        
+\documentclass[11pt,a4paper,roman, colorlinks,linkcolor=true]{moderncv}        
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\setlength{\hintscolumnwidth}{2.8cm} % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{3.5cm} % if you want to change the width of the column with the dates
 \moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+
 \usepackage[osf,sc]{mathpazo}
 \linespread{1.05}  
 \usepackage{inconsolata}
@@ -11,118 +12,84 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \usepackage{courier}
-\usepackage{fontawesome}
+%\usepackage{fontspec}
+%\usepackage{fontawesome}
 
 % personal data
 \name{Fran}{Bartoli\'{c}}
-\title{\textcolor{gray}{ Curriculum Vitae}}
-%\address{Ivana Zajca 4}{51000 Rijeka}{Croatia}
-\homepage{fran.space}
-\phone[mobile]{+44~(74)~609~22558}                   % optional, remove / commen
-\email{fb90 at st-andrews.ac.uk} 
-\extrainfo{%
-\faTwitter \, @fbartolic\\ 
-\faGithub \, fbartolic}
+\title{\textcolor{gray}{ \normalsize PhD candidate in astrophysics 
+working on\newline probabilistic modeling of time-series data.\newline Interested 
+in applying my skills to solving\newline problems in an industry setting.}}
+\extrainfo{
+    \normalfont \textbf{website:} fbartolic.github.io\\
+ \normalfont \textbf{email:} fb90 \emph{at} ast-andrews.ac.uk\\
+ \normalfont \textbf{github:} fbartolic\\
+ \normalfont \textbf{location:} Oxford, UK}
+%\extrainfo{%
+%\faTwitter \, @fbartolic\\ 
+%\faGithub \, fbartolic}
+
+%\AfterPreamble{\hypersetup{
+%  urlcolor=red,
+%}}
 
 \begin{document}
+\renewcommand*{\titlefont}{\fontsize{14}{18}\mdseries\upshape}
 \makecvtitle
 \section{Personal information}
 \cvitem{Nationality}{Croatian}
 \cvitem{Languages}{Croatian (Native), English (Fluent)}
 
-\section{Education}
-\cventry{2017--2021 (expected)}{Ph.D. Astrophysics}{University of St Andrews}
-{St Andrews, Scotland}{}{This PhD position is a part of a new scheme funded by the UK government
-with a strong focus on producing PhD graduates with Data Science and industry relevant skills. 
-In my research, I am primarily interested in building interpretable probabilistic models
-using advanced methods such as Bayesian modeling and Machine Learning.}
-\cventry{2015--2017}{M.Sc. Physics with Astrophysics}{University of Rijeka}
-{Rijeka, Croatia}{}{Cumulative GPA: 4.7/5. I spent the first three semesters 
-doing courses in theoretical 
-physics and astronomy. In the final semester I worked on 
-a research project at Lund University in Sweden for 7 months.}
-
-\cventry{2012--2015}{B.Sc. Physics}{University of Split}{Split, Croatia}{}
-{Cumulative GPA: 4.5/5. I took courses in theoretical physics and programming. In the final 
-semester I did a short research project as an exchange student in Lund, Sweden.}
-
-\section{Research Experience}
+\definecolor{links}{HTML}{0088cc}
+\hypersetup{urlcolor=links}
+\section{Experience}
 \cventry{09/2017--today}{Ph.D. project}{
     School of Physics \& Astronomy, University of St Andrews}
-{Scotland}{}{I am working on modeling astrophysical time series data 
-using advanced Bayesian methods. 
-I am interested in building
-probabilistic models of astrophysical time series data
-in order to extract useful information 
-about populations of extrasolar planets.
-These models are complex, non-linear, and have degenerate 
-parameter spaces, a regime where
-even the most sophisticated statistical methods regularly fail. 
-The statistical methods I use in my research include 
-Gaussian Processes, Hamiltonian Monte Carlo, linear models, 
-and neural networks. I am approaching the PhD project 
-bottom-up, starting with simple interpretable models, solving 
-one challenging problem at the time, and writing usable 
-and scalable open-source code in the process.} 
+{Scotland}{}{I build probabilistic models of astrophysical time series data 
+using advanced Bayesian statistical methods for the purpose of inferring properties of exoplanets.
+In the process, I write open-source \href{https://caustic.readthedocs.io/en/latest/}{code} written in \textsf{Python}.
+I am particularly interested in building interpretable models in a regime where prior information and expert knowledge cannot be neglected.
+The methods I use in my research include Hamiltonian Monte Carlo, Gaussian Processes, linear models, Variational Inference and automatic differentiation.}
 
-\cventry{02/2017--09/2017}{Master's thesis project}{
-Lund University}
-{Sweden}{30 weeks FTE work}{
-The subject of the thesis was to construct 
-analytical and numerical models describing the dynamics of extrasolar planets.
-I developed both an analytical pen and paper model, 
-and used numerical simulations to understand the relevant physical phenomenon. 
-The project involved writing \texttt{Python} code for 
-solving symbolic equations and making plots, and interfacing Python
-code with a solver for differential equations 
-written in \texttt{C++}.}
-
-\cventry{07/2016--08/2016}{Summer research program}{Nicolaus Copernicus
-Astronomical Center}
-{Warsaw, Poland}{4 weeks FTE work}{I worked on astrophysical fluid dynamics 
-simulations using a popular astrophysics code written in \texttt{C++}.
-I spent my time running simulations and writing a data visualization code in \texttt{Python}.
-I learned to work with Linux based computer clusters.
-}
+\cventry{02/2020--06/2020}{Research analyst}{
+    Center for Computational Astrophysics (CCA), Flatiron Institute (Simons Foundation)}
+{New York}{}{I spent 5 months at the Flatiron Institute working in a team with two other scientists on a probabilistic model for inferring the two-dimensional surfaces of exoplanets given only one-dimensional time series measurements.
+This \href{https://github.com/fbartolic/volcano/blob/master-pdf/paper/paper.pdf}{project} incorporates cutting edge methods on the intersection of statistics, machine learning and computational physics.}
 
 \section{Skills}
-\cvitem{Programming}{I have extensive experience in \texttt{Python}, together 
-with libraries \texttt{NumPy}, 
-\texttt{Pandas}, \texttt{matplotlib}, and \texttt{Jupyter} notebooks. 
-Besides Python. I have intermediate experience with \texttt{C/C++}, and have written
-code combining Python and C++. I have used \texttt{C\#} in the past.}
-\cvitem{Data science}{Extensive experience with the probabilistic 
-programming library \texttt{PyMC3} together with \texttt{theano}. 
-I have implemented simple 
-machine learning models in \texttt{Tensorflow} and \texttt{PyTorch}.}
-\cvitem{Statistics}{Extensive experience with Bayesian 
-modeling and MCMC methods. Some experience with classification problems.}
-\cvitem{Other technical}{\texttt{Git} version control, \texttt{Vim}, \LaTeX, 
-\texttt{Linux} systems, \texttt{Bash} shell.}
-\cvitem{Communication}{ I have given talks at conferences and meetings in academia, 
+\cvitem{Programming}{\textsf{Python}, \textsf{C/C++}.}
+\cvitem{Tools and libraries}{\textsf{PyMC3}, \textsf{Pyro}, \textsf{JAX}, \textsf{theano}, \textsf{Stan}, \textsf{scikit-learn}, \textsf{PyTorch}, \textsf{Jupyter}, \textsf{Pandas}, \textsf{matplotlib}.}
+\cvitem{Statistics \& ML}{Probabilistic modeling, general linear models, MCMC, Variational Inference, Bayesian decision making, Gaussian Processes, frequentist statistics, Neural Networks.}
+\cvitem{Other technical}{\textsf{Git}, \textsf{Vim}, \textsf{Linux}, basic Azure DevOps, HTML \& CSS.}
+\cvitem{Communication}{I have given talks at conferences and meetings in academia
 as well as talks to the general public. I have given tutorials 
 for an undergraduate course in in astronomy. 
 I have experience with describing complex statistical methods to a lay audience.}
-\cvitem{Organization}{I am organizing a regular meeting on Data Science at my
-department and co-organising a weekly meeting on coding.}
-\cvitem{Mentoring}{I have supervised a summer student working on a machine learning 
-project in astronomy.}
+\cvitem{Mentoring}{I have tutored undergraduates in astronomy.}
+
+\section{Education}
+\cventry{2017--2022 (expected)}{Ph.D. Astrophysics}{University of St Andrews}
+{St Andrews, Scotland}{}{This position is a part of a \href{https://www.scotdist.ac.uk/industry/student-placements}{scheme} funded by the UK government whose goal is to produce PhD graduates with data science skills relevant to industry positions.}
+\cventry{2015--2017}{M.Sc. Physics with Astrophysics}{University of Rijeka}
+{Rijeka, Croatia}{}{Cumulative GPA: 4.7/5. Courses in theoretical physics. Exchange \href{https://github.com/fbartolic/master_thesis}{project} at Lund University in Sweden where I worked on an independent research project for 7 months.}
+\cventry{2012--2015}{B.Sc. Physics}{University of Split}{Split, Croatia}{}
+{Cumulative GPA: 4.5/5. Courses in theoretical physics and programming. Exchange semester in Lund, Sweden.}
+
 
 \section{Publications}
-\cvitem{2019}{\textbf{F. Bartoli\'{c}} et. al. (in prep). Paper on 
-building a hierarchical Bayesian model for astrophysical time 
-series prediction.}
-\cvitem{2019}{\textbf{F. Bartoli\'{c}} et. al. (in prep). 
-Paper on Bayesian modeling of microlensing events using Gaussian Processes 
-and Hamiltonian Monte Carlo.}
+\cvitem{2021}{\textbf{F. Bartoli\'{c}} \& M. Dominik (in prep). Statistical challenges in modeling
+gravitational microlensing events.}
+\cvitem{2021}{\textbf{F. Bartoli\'{c}}, R. Luger, D. Foreman-Mackey (in prep). Occultation mapping of Io\textquotesingle s surface in the near-infrared II: Inferring dynamic maps}
+\cvitem{2021}{\textbf{F. Bartoli\'{c}}, R. Luger, D. Foreman-Mackey (in prep). Occultation mapping of Io\textquotesingle s surface in the near-infrared I: Inferring static maps}
+\cvitem{2021}{R. Luger, E. Agol, \textbf{F. Bartoli\'{c}}, D. Foreman-Mackey (in prep). Analytic Light Curves in Reflected Light: Phase Curves, Occultations, and Non-Lambertian Scattering for
+Spherical Planets and Moons.}
+\cvitem{2020}{N. Golovich, W. Dawson, \textbf{F. Bartoli\'{c}}, et al. A Reanalysis of Public OGLE-III and IV Gravitational Microlensing Events, arXiv:2009.07927}
 \cvitem{2018}{V. Bozza, E. Bachelet, \textbf{F. Bartoli\'{c}}, T. M. Heintz, 
 A. R. Hoag, and M. Hun-dertmark.  \emph{VBBINARYLENSING: a public package 
-for microlensing light-curve  computation.}, 479:5157–5167,  
-October  2018.    doi:   10.1093/mn-ras/sty1791}
+for microlensing light-curve  computation.}, 2018, MNRAS, 479, 5157. doi:10.1093/mnras/sty1791}
 
 \section{Awards, Competitions and Honors}
-\cvitem{2016}{\emph{Erasmus+ Internship } scholarship.}
+\cvitem{2019}{\emph{Arthur Maitland Prize} for the best talk, University of St Andrews.}
 \cvitem{2015}{\emph{Dean's Award for undergraduate academic excellence}, 
 University of Split.}
-\cvitem{2014}{\emph{Erasmus+ Exchange }scholarship.}
 \end{document}
