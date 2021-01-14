@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper,roman, colorlinks,linkcolor=true]{moderncv}        
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\setlength{\hintscolumnwidth}{3.5cm} % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{2.3cm} % if you want to change the width of the column with the dates
 \moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 
 \usepackage[osf,sc]{mathpazo}
@@ -8,12 +8,10 @@
 \usepackage{inconsolata}
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\usepackage[scale=0.88]{geometry}
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \usepackage{courier}
-%\usepackage{fontspec}
-%\usepackage{fontawesome}
+\usepackage{xpatch}% http://ctan.org/pkg/xpatch
 
 % personal data
 \name{Fran}{Bartoli\'{c}}
@@ -25,17 +23,16 @@ in applying my skills to solving\newline exciting new problems in an industry se
  \normalfont \textbf{email:} fb90 \emph{at} ast-andrews.ac.uk\\
  \normalfont \textbf{github:} \href{https://github.com/fbartolic}{fbartolic}\\
  \normalfont \textbf{location:} Oxford, UK}
-%\extrainfo{%
-%\faTwitter \, @fbartolic\\ 
-%\faGithub \, fbartolic}
-
-%\AfterPreamble{\hypersetup{
-%  urlcolor=red,
-%}}
 
 \begin{document}
-\renewcommand*{\titlefont}{\fontsize{14}{18}\mdseries\upshape}
+
+% FONT SIZES
+\renewcommand*{\titlefont}{\fontsize{10}{14}\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{32}{34}\mdseries\upshape}
+\xpatchcmd{\cvitem}{#3}{\small #3}{}{}
+\patchcmd{\section}{0.95ex}{0.5ex}{}{}
 \makecvtitle
+
 \section{Personal information}
 \cvitem{Nationality}{Croatian}
 \cvitem{Languages}{English (Fluent), Croatian (Native)}
@@ -43,33 +40,40 @@ in applying my skills to solving\newline exciting new problems in an industry se
 \definecolor{links}{HTML}{0088cc}
 \hypersetup{urlcolor=links}
 \section{Experience}
-\cventry{09/2017--today}{Ph.D. project}{School of Physics \& Astronomy, University of St Andrews}
-{Scotland}{}{In my ongoing PhD work I build probabilistic models of astrophysical time series data 
-using advanced Bayesian statistical methods for the purpose of inferring properties of exoplanets.
-To implement the models I write open-source \href{https://caustic.readthedocs.io/en/latest/}{code} in \textsf{Python}.
-I am particularly interested in building interpretable models in a regime where prior information and expert knowledge cannot be neglected.
-The methods I use in my research include Hamiltonian Monte Carlo, Gaussian Processes, linear models, Variational Inference and automatic differentiation.}
-
 \cventry{02/2020--06/2020}{Research analyst}{
     Center for Computational Astrophysics (CCA), Flatiron Institute (Simons Foundation)}
-{New York, USA}{}{I spent 5 months working in a team with two other scientists on a probabilistic model for inferring two-dimensional surface maps of exoplanets given only one-dimensional time series measurements.
-This \href{https://github.com/fbartolic/volcano/blob/master-pdf/paper/paper.pdf}{project} incorporated cutting edge methods on the intersection of statistics, machine learning and computational astrophysics.}
+{New York, USA}{}{
+    \begin{itemize}
+        \item Developed a probabilistic \href{https://speakerdeck.com/fbartolic/inferring-a-time-dependent-map-of-io-from-occultations-and-phase-curves}{model} for inferring time-variable two dimensional surface maps of exoplanets given one-dimensional time series data using latent nonnegative matrix factorization (NMF) and variational inference.
+\item Wrote code in \textsf{Python} using \textsf{PyMC3} and \textsf{Numpyro}.
+\item Worked in a team with two other scientists.
+\item Upcoming \href{https://github.com/fbartolic/volcano/blob/master-pdf/paper/paper.pdf}{paper} contains more details.
+\end{itemize}}
 
 \section{Skills}
 \cvitem{Programming}{\textsf{Python}, \textsf{C/C++}.}
-\cvitem{Tools and libraries}{\textsf{PyMC3}, \textsf{Pyro}, \textsf{JAX}, \textsf{theano}, \textsf{Stan}, \textsf{scikit-learn}, \textsf{PyTorch}, \textsf{Jupyter}, \textsf{Pandas}, \textsf{matplotlib}.}
+\cvitem{Tools}{\textsf{PyMC3}, \textsf{Pyro}, \textsf{JAX}, \textsf{theano}, \textsf{Stan}, \textsf{scikit-learn}, \textsf{PyTorch}, \textsf{Jupyter}, \textsf{Pandas}, \textsf{matplotlib},
+\textsf{Git}, continuous integration, \textsf{Vim}, \textsf{Linux}, HTML \& CSS.}
 \cvitem{Statistics \& ML}{Probabilistic modelling, general linear models, MCMC, variational inference, Bayesian decision making, Gaussian processes, frequentist statistics, neural networks.}
-\cvitem{Other technical}{\textsf{Git}, continuous integration, \textsf{Vim}, \textsf{Linux}, HTML \& CSS.}
-\cvitem{Communication}{I have given \href{https://speakerdeck.com/fbartolic}{talks} at international conferences and meetings, along with working on projects at different scales. As part of my PhD I have tutored undergraduates in astronomy and have given talks to members of the public, having to describe complex statistical methods to non-experts.}
+\cvitem{Other}{I have given \href{https://speakerdeck.com/fbartolic}{talks} at international conferences and meetings and worked on projects in a team. As part of my PhD I have tutored undergraduates in astronomy and have given talks to members of the public, having to describe complex statistical methods to non-experts.}
 
 \section{Education}
 \cventry{2017--2022 (expected)}{Ph.D. Astrophysics}{University of St Andrews}
-{St Andrews, Scotland}{}{This position is a part of a \href{https://www.scotdist.ac.uk/industry/student-placements}{scheme} funded by the UK government whose goal is to produce PhD graduates with data science skills relevant to industry positions.}
+{St Andrews, Scotland}{}{    \begin{itemize}
+            \item Conducted research into Bayesian approaches to modeling astrophysical time-series data for the purpose of detecting stars, exoplanets and black holes in a regime where priors and expert knowledge cannot be neglected.
+            \item Wrote open-source Python package \href{https://caustic.readthedocs.io/en/latest/}{caustic} for fitting gravitational microlensing events using Hamiltonian Monte Carlo and Nested Sampling.
+       \item Given talks at international conferences and workshops.
+           \item Took courses related in machine learning and data science.
+\end{itemize}}
 \cventry{2015--2017}{M.Sc. Physics with Astrophysics}{University of Rijeka}
-{Rijeka, Croatia}{}{Cumulative GPA: 4.7/5. Courses in theoretical physics. Exchange \href{https://github.com/fbartolic/master_thesis}{project} at Lund University in Sweden where I worked on an independent research project for 7 months.}
+{Rijeka, Croatia}{}{\begin{itemize}\item Cumulative GPA: 4.7/5. 
+            \item Took courses in theoretical physics.
+\item Worked on a theoretical research \href{https://github.com/fbartolic/master_thesis}{project} in astrophysics for 7 months at Lund University in Sweden.\end{itemize}}
 \cventry{2012--2015}{B.Sc. Physics}{University of Split}{Split, Croatia}{}
-{Cumulative GPA: 4.5/5. Courses in theoretical physics and programming. Exchange semester in Lund, Sweden.}
-
+{\begin{itemize}\item Cumulative GPA: 4.5/5.
+            \item Took courses in theoretical physics and computer science.
+            \item Exchange semester at Lund University in Sweden.
+\end{itemize}}
 
 \section{Publications}
 \cvitem{2021}{\textbf{F. Bartoli\'{c}} \& M. Dominik (in prep). Statistical challenges in modelling
