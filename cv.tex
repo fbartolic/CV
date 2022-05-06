@@ -17,13 +17,13 @@
 \name{Fran}{Bartoli\'{c}}
 \title{\textcolor{gray}{ \normalsize PhD candidate in astrophysics 
 working on\newline probabilistic modelling of time-series data.\newline Interested 
-in applying my skills to solving\newline exciting new problems in an industry setting.}}
+in applying my skills to solving\newline important problems in an industry setting.}}
 \extrainfo{
     \normalfont \textbf{website:} \href{https://fbartolic.github.io}{fbartolic.github.io}\\
  \normalfont \textbf{email:} fb90 \emph{at} ast-andrews.ac.uk\\
  \normalfont \textbf{github:} \href{https://github.com/fbartolic}{fbartolic}\\
  \normalfont \textbf{linkedin:} \href{https://www.linkedin.com/in/fbartolic/}{fbartolic}\\
- \normalfont \textbf{location:} Oxford, UK}
+ \normalfont \textbf{location:} Zagreb, Croatia}
 
 \begin{document}
 
@@ -41,6 +41,12 @@ in applying my skills to solving\newline exciting new problems in an industry se
 \definecolor{links}{HTML}{0088cc}
 \hypersetup{urlcolor=links}
 \section{Experience}
+\cventry{06/2021--12/2021}{Research resident}{Cervest}
+{London, UK}{}{
+    \begin{itemize}
+        \item Built probabilistic models for predicting the Urban Heat Island effect using a variety of geospatial datasets.
+        \item Gained skills in remote sensing, climate science and geospatial data analysis.
+    \end{itemize}}
 \cventry{02/2020--06/2020}{Research analyst}{Center for Computational Astrophysics (CCA), Flatiron Institute (Simons Foundation)}
 {New York, USA}{}{
     \begin{itemize}
@@ -50,18 +56,19 @@ in applying my skills to solving\newline exciting new problems in an industry se
 \end{itemize}}
 
 \section{Skills}
-\cvitem{Programming}{\textsf{Python}, \textsf{C/C++}.}
-\cvitem{Tools}{\textsf{PyMC3}, \textsf{Pyro}, \textsf{JAX}, \textsf{theano}, \textsf{Stan}, \textsf{scikit-learn}, \textsf{PyTorch}, \textsf{Jupyter}, \textsf{Pandas}, \textsf{matplotlib}, SQL, R,
+\cvitem{Programming}{\textsf{Python}, \textsf{C/C++}, \textsf{CUDA}.}
+\cvitem{Tools}{\textsf{JAX}, \textsf{PyMC3}, \textsf{xarray}, \textsf{dvc}, \textsf{numpyro},\textsf{theano}, \textsf{Stan}, \textsf{scikit-learn}, \textsf{PyTorch}, \textsf{Jupyter}, \textsf{Pandas}, \textsf{matplotlib}, SQL, R,
 \textsf{Git}, continuous integration, \textsf{Vim}, \textsf{Linux}, HTML \& CSS.}
-\cvitem{Statistics \& ML}{Probabilistic modelling, general linear models, MCMC, variational inference, Bayesian model comparison, Gaussian processes, Frequentist statistics, neural networks, normalizing flows.}
+\cvitem{Statistics \& ML}{Probabilistic modelling, autodiff, general linear models, MCMC, variational inference, Bayesian model comparison, Gaussian processes, Frequentist statistics, neural networks, normalizing flows.}
+\cvitem{Geospatial}{I've built ML pipelines using Landsat, MODIS, VIIRS and OSM datasets.}
 \cvitem{Other}{I have given \href{https://speakerdeck.com/fbartolic}{talks} at international conferences and meetings and worked on projects in a team. I have tutored undergraduates in astronomy and have given talks to members of the public. 
 I am good at describing complex statistical methods to non-experts.}
 
 \section{Education}
 \cventry{2017--2022 (expected)}{Ph.D. Astrophysics}{University of St Andrews}
 {St Andrews, Scotland}{}{    \begin{itemize}
+            \item Wrote open-source Python package \href{https://github.com/fbartolic/caustics}{caustics} for differentiable computation of binary and triple lens microlensing light curves with JAX.
             \item Conducted research into Bayesian approaches to modeling astrophysical time-series data for the purpose of detecting stars, exoplanets and black holes in a regime where priors and expert knowledge are crucial.
-            \item Wrote open-source Python package \href{https://caustic.readthedocs.io/en/latest/}{caustic} for fitting gravitational microlensing events using Hamiltonian Monte Carlo and Nested Sampling.
        \item Given talks at international conferences and workshops.
            \item Took courses related in machine learning and data science.
 \end{itemize}}
@@ -76,15 +83,17 @@ I am good at describing complex statistical methods to non-experts.}
 \end{itemize}}
 
 \section{Publications}
-\cvitem{2021}{\textbf{F. Bartoli\'{c}} \& M. Dominik (in prep). Statistical challenges in modelling
-gravitational microlensing events.}
-\cvitem{2021}{\textbf{F. Bartoli\'{c}}, R. Luger, D. Foreman-Mackey (in prep). Occultation mapping of Io\textquotesingle s surface in the near-infrared II: Inferring dynamic maps}
-\cvitem{2021}{R. Luger, E. Agol, \textbf{F. Bartoli\'{c}}, D. Foreman-Mackey. Analytic Light Curves in Reflected Light: Phase Curves, Occultations, and Non-Lambertian Scattering for Spherical Planets and Moons, \href{https://arxiv.org/abs/2103.06275}{arXiv:2103.06275}.}
-\cvitem{2021}{\textbf{F. Bartoli\'{c}}, R. Luger, D. Foreman-Mackey . Occultation mapping of Io\textquotesingle s surface in the near-infrared I: Inferring static maps, \href{https://arxiv.org/abs/2103.03758}{arXiv:2103.03758}.}
-\cvitem{2020}{N. Golovich, W. Dawson, \textbf{F. Bartoli\'{c}}, et al. A Reanalysis of Public OGLE-III and IV Gravitational Microlensing Events, \href{https://arxiv.org/abs/2009.07927}{arXiv:2009.07927}.}
+\cvitem{2022}{\textbf{F. Bartoli\'{c}} \& M. Dominik (in prep). \emph{
+    \textsf{caustics} -- differentiable modeling of binary and triple lens microlensing light curves with \textsf{JAX}.}}
+\cvitem{2022}{
+    \textbf{F. Bartoli\'{c}}, J. Skinner, R. Luger, J. Cho, and D. Foreman-Mackey (in prep). 
+    \emph{What can we learn about spatial maps of exoplanets in emitted light with JWST photometric observations of secondary eclipses?}
+    }
+\cvitem{2022}{\textbf{F. Bartoli\'{c}}, R. Luger, D. Foreman-Mackey . \emph{Occultation mapping of Io\textquotesingle s surface in the near-infrared I: Inferring static maps}, The Planetary Science Journal. doi:10.3847/PSJ/ac2a3e.}
+\cvitem{2021}{R. Luger, E. Agol, \textbf{F. Bartoli\'{c}}, D. Foreman-Mackey. \emph{Analytic Light Curves in Reflected Light: Phase Curves, Occultations, and Non-Lambertian Scattering for Spherical Planets and Moons}, \href{https://arxiv.org/abs/2103.06275}{arXiv:2103.06275}.}
+\cvitem{2020}{N. Golovich, W. Dawson, \textbf{F. Bartoli\'{c}}, et al. \emph{A Reanalysis of Public OGLE-III and IV Gravitational Microlensing Events}, \href{https://arxiv.org/abs/2009.07927}{arXiv:2009.07927}.}
 \cvitem{2018}{V. Bozza, E. Bachelet, \textbf{F. Bartoli\'{c}}, T. M. Heintz, 
-A. R. Hoag, and M. Hun-dertmark.  \emph{VBBINARYLENSING: a public package 
-for microlensing light-curve  computation.}, 2018, MNRAS, 479, 5157. doi:10.1093/mnras/sty1791}
+A. R. Hoag, and M. Hun-dertmark.  \emph{VBBINARYLENSING: a public package for microlensing light-curve  computation.}, 2018, MNRAS, 479, 5157. doi:10.1093/mnras/sty1791}
 
 \section{Awards, Competitions and Honors}
 \cvitem{2019}{\emph{Arthur Maitland Prize} for the best talk, University of St Andrews.}
@@ -92,5 +101,5 @@ for microlensing light-curve  computation.}, 2018, MNRAS, 479, 5157. doi:10.1093
 University of Split.}
 
 \section{Hobbies \& Interests}
-\cvitem{}{Cooking, reading, complexity science, localism, Effective Altruism.}
+\cvitem{}{Cooking, reading, complexity science, AI, history.}
 \end{document}
